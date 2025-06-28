@@ -1,0 +1,161 @@
+{
+  "consumer": {
+    "name": "TaskConsumer"
+  },
+  "provider": {
+    "name": "TaskProvider"
+  },
+  "interactions": [
+    {
+      "description": "Obtiene todos los servidores",
+      "request": {
+        "method": "GET",
+        "path": "/servers/"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": [
+          {
+            "id": 1,
+            "info": [
+              "Linux"
+            ],
+            "ip": "192.000.000",
+            "name": "Server1"
+          },
+          {
+            "id": 2,
+            "info": [
+              "8 cores"
+            ],
+            "ip": "192.000.001",
+            "name": "Server2"
+          },
+          {
+            "id": 3,
+            "info": [
+              "Desktop",
+              "Windows"
+            ],
+            "ip": "192.000.002",
+            "name": "Server3"
+          }
+        ]
+      }
+    },
+    {
+      "description": "Agregar servidor",
+      "request": {
+        "method": "POST",
+        "path": "/servers/servers",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "info": [
+            "Linux"
+          ],
+          "ip": "192.000.000",
+          "name": "Servidor nuevo"
+        }
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+        },
+        "body": {
+          "id": 4,
+          "name": "Servidor nuevo",
+          "ip": "192.000.000",
+          "info": [
+            "Linux"
+          ]
+        }
+      }
+    },
+    {
+      "description": "Cambiar info",
+      "request": {
+        "method": "PUT",
+        "path": "/servers/servers/changeip/1",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "info": [
+            "New info"
+          ],
+          "name": "Nuevo servidor"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "id": 1,
+          "info": [
+            "New info"
+          ],
+          "ip": "192.000.000",
+          "name": "Nuevo servidor"
+        }
+      }
+    },
+    {
+      "description": "Cambiar info no encontrado",
+      "request": {
+        "method": "PUT",
+        "path": "/servers/servers/changeip/99",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "info": [
+            "New info 99"
+          ],
+          "name": "Nuevo servidor 99"
+        }
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+        },
+        "body": {
+          "error": "Server not found"
+        }
+      }
+    },
+    {
+      "description": "Borrar servidor",
+      "request": {
+        "method": "DELETE",
+        "path": "/servers/servers/1"
+      },
+      "response": {
+        "status": 204,
+        "headers": {
+        }
+      }
+    },
+    {
+      "description": "Borrar servidor no encontrado",
+      "request": {
+        "method": "DELETE",
+        "path": "/servers/servers/99"
+      },
+      "response": {
+        "status": 404,
+        "headers": {
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

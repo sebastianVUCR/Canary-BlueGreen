@@ -1,0 +1,31 @@
+Tarea 5
+
+Ejecutar los siguientes comando desde la carpeta donde está este archivo para crear e iniciar los comtenedores
+
+docker-compose build
+docker-compose up -d
+
+Ejecutar el siguiente comando desde la carpeta donde está este archivo para iniciar el contenedor de docker con rabbitmq. Es necesario para el servicio testOrchestrator 
+
+docker compose -f rabbitmq-container.yaml up -d
+
+abrir en el navegador los siguientes servicios
+
+servers
+http://localhost:5000/apidocs/
+
+users
+http://localhost:5001/apidocs/
+
+testOrchestrator
+http://localhost:5002/apidocs/
+
+Nota: como oportunidad de mejora, se puede reorganizar el proyecto para que no se duplique el archivo log_utils.py
+
+
+
+
+
+
+
+
