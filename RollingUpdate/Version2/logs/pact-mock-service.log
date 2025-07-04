@@ -1,0 +1,367 @@
+I, [2025-06-05T19:42:55.330580 #35496]  INFO -- : Cleared interactions
+I, [2025-06-05T19:42:55.345380 #35496]  INFO -- : Registered expected interaction GET /servers/
+D, [2025-06-05T19:42:55.345630 #35496] DEBUG -- : {
+  "description": "Obtiene todos los servidores",
+  "request": {
+    "method": "GET",
+    "path": "/servers/"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": [
+      {
+        "id": 1,
+        "info": [
+          "Linux"
+        ],
+        "ip": "192.000.000",
+        "name": "Server1"
+      },
+      {
+        "id": 2,
+        "info": [
+          "8 cores"
+        ],
+        "ip": "192.000.001",
+        "name": "Server2"
+      },
+      {
+        "id": 3,
+        "info": [
+          "Desktop",
+          "Windows"
+        ],
+        "ip": "192.000.002",
+        "name": "Server3"
+      }
+    ]
+  },
+  "metadata": null
+}
+I, [2025-06-05T19:42:55.361628 #35496]  INFO -- : Received request GET /servers/
+D, [2025-06-05T19:42:55.361757 #35496] DEBUG -- : {
+  "path": "/servers/",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Host": "localhost:6000",
+    "User-Agent": "python-requests/2.32.3",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2025-06-05T19:42:55.361911 #35496]  INFO -- : Found matching response for GET /servers/
+D, [2025-06-05T19:42:55.361975 #35496] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": [
+    {
+      "id": 1,
+      "info": [
+        "Linux"
+      ],
+      "ip": "192.000.000",
+      "name": "Server1"
+    },
+    {
+      "id": 2,
+      "info": [
+        "8 cores"
+      ],
+      "ip": "192.000.001",
+      "name": "Server2"
+    },
+    {
+      "id": 3,
+      "info": [
+        "Desktop",
+        "Windows"
+      ],
+      "ip": "192.000.002",
+      "name": "Server3"
+    }
+  ]
+}
+I, [2025-06-05T19:42:55.376789 #35496]  INFO -- : Verifying - interactions matched
+I, [2025-06-05T19:42:55.392252 #35496]  INFO -- : Writing pact for TaskProvider to ./pacts/taskconsumer-taskprovider.json
+I, [2025-06-05T19:42:55.408050 #35496]  INFO -- : Cleared interactions
+I, [2025-06-05T19:42:55.422612 #35496]  INFO -- : Registered expected interaction POST /servers/servers
+D, [2025-06-05T19:42:55.422730 #35496] DEBUG -- : {
+  "description": "Agregar servidor",
+  "request": {
+    "method": "POST",
+    "path": "/servers/servers",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "info": [
+        "Linux"
+      ],
+      "ip": "192.000.000",
+      "name": "Servidor nuevo"
+    }
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+    },
+    "body": {
+      "id": 4,
+      "name": "Servidor nuevo",
+      "ip": "192.000.000",
+      "info": [
+        "Linux"
+      ]
+    }
+  },
+  "metadata": null
+}
+I, [2025-06-05T19:42:55.439131 #35496]  INFO -- : Received request POST /servers/servers
+D, [2025-06-05T19:42:55.439267 #35496] DEBUG -- : {
+  "path": "/servers/servers",
+  "query": "",
+  "method": "post",
+  "body": {
+    "info": [
+      "Linux"
+    ],
+    "ip": "192.000.000",
+    "name": "Servidor nuevo"
+  },
+  "headers": {
+    "Content-Length": "66",
+    "Content-Type": "application/json",
+    "Host": "localhost:6000",
+    "User-Agent": "python-requests/2.32.3",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2025-06-05T19:42:55.439440 #35496]  INFO -- : Found matching response for POST /servers/servers
+D, [2025-06-05T19:42:55.439503 #35496] DEBUG -- : {
+  "status": 201,
+  "headers": {
+  },
+  "body": {
+    "id": 4,
+    "name": "Servidor nuevo",
+    "ip": "192.000.000",
+    "info": [
+      "Linux"
+    ]
+  }
+}
+I, [2025-06-05T19:42:55.454947 #35496]  INFO -- : Verifying - interactions matched
+I, [2025-06-05T19:42:55.470184 #35496]  INFO -- : Writing pact for TaskProvider to ./pacts/taskconsumer-taskprovider.json
+I, [2025-06-05T19:42:55.489334 #35496]  INFO -- : Cleared interactions
+I, [2025-06-05T19:42:55.502212 #35496]  INFO -- : Registered expected interaction PUT /servers/servers/changeip/1
+D, [2025-06-05T19:42:55.502422 #35496] DEBUG -- : {
+  "description": "Cambiar info",
+  "request": {
+    "method": "PUT",
+    "path": "/servers/servers/changeip/1",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "info": [
+        "New info"
+      ],
+      "name": "Nuevo servidor"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "id": 1,
+      "info": [
+        "New info"
+      ],
+      "ip": "192.000.000",
+      "name": "Nuevo servidor"
+    }
+  },
+  "metadata": null
+}
+I, [2025-06-05T19:42:55.519435 #35496]  INFO -- : Received request PUT /servers/servers/changeip/1
+D, [2025-06-05T19:42:55.519663 #35496] DEBUG -- : {
+  "path": "/servers/servers/changeip/1",
+  "query": "",
+  "method": "put",
+  "body": {
+    "info": [
+      "New info"
+    ],
+    "name": "Nuevo servidor"
+  },
+  "headers": {
+    "Content-Length": "48",
+    "Content-Type": "application/json",
+    "Host": "localhost:6000",
+    "User-Agent": "python-requests/2.32.3",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2025-06-05T19:42:55.519920 #35496]  INFO -- : Found matching response for PUT /servers/servers/changeip/1
+D, [2025-06-05T19:42:55.520037 #35496] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "id": 1,
+    "info": [
+      "New info"
+    ],
+    "ip": "192.000.000",
+    "name": "Nuevo servidor"
+  }
+}
+I, [2025-06-05T19:42:55.533462 #35496]  INFO -- : Verifying - interactions matched
+I, [2025-06-05T19:42:55.550987 #35496]  INFO -- : Writing pact for TaskProvider to ./pacts/taskconsumer-taskprovider.json
+I, [2025-06-05T19:42:55.579708 #35496]  INFO -- : Cleared interactions
+I, [2025-06-05T19:42:55.600308 #35496]  INFO -- : Registered expected interaction PUT /servers/servers/changeip/99
+D, [2025-06-05T19:42:55.600926 #35496] DEBUG -- : {
+  "description": "Cambiar info no encontrado",
+  "request": {
+    "method": "PUT",
+    "path": "/servers/servers/changeip/99",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "info": [
+        "New info 99"
+      ],
+      "name": "Nuevo servidor 99"
+    }
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+    },
+    "body": {
+      "error": "Server not found"
+    }
+  },
+  "metadata": null
+}
+I, [2025-06-05T19:42:55.614027 #35496]  INFO -- : Received request PUT /servers/servers/changeip/99
+D, [2025-06-05T19:42:55.614544 #35496] DEBUG -- : {
+  "path": "/servers/servers/changeip/99",
+  "query": "",
+  "method": "put",
+  "body": {
+    "info": [
+      "New info 99"
+    ],
+    "name": "Nuevo servidor 99"
+  },
+  "headers": {
+    "Content-Length": "54",
+    "Content-Type": "application/json",
+    "Host": "localhost:6000",
+    "User-Agent": "python-requests/2.32.3",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2025-06-05T19:42:55.615195 #35496]  INFO -- : Found matching response for PUT /servers/servers/changeip/99
+D, [2025-06-05T19:42:55.615480 #35496] DEBUG -- : {
+  "status": 404,
+  "headers": {
+  },
+  "body": {
+    "error": "Server not found"
+  }
+}
+I, [2025-06-05T19:42:55.632162 #35496]  INFO -- : Verifying - interactions matched
+I, [2025-06-05T19:42:55.662112 #35496]  INFO -- : Writing pact for TaskProvider to ./pacts/taskconsumer-taskprovider.json
+I, [2025-06-05T19:42:55.694958 #35496]  INFO -- : Cleared interactions
+I, [2025-06-05T19:42:55.720336 #35496]  INFO -- : Registered expected interaction DELETE /servers/servers/1
+D, [2025-06-05T19:42:55.720558 #35496] DEBUG -- : {
+  "description": "Borrar servidor",
+  "request": {
+    "method": "DELETE",
+    "path": "/servers/servers/1"
+  },
+  "response": {
+    "status": 204,
+    "headers": {
+    }
+  },
+  "metadata": null
+}
+I, [2025-06-05T19:42:55.739307 #35496]  INFO -- : Received request DELETE /servers/servers/1
+D, [2025-06-05T19:42:55.739633 #35496] DEBUG -- : {
+  "path": "/servers/servers/1",
+  "query": "",
+  "method": "delete",
+  "headers": {
+    "Host": "localhost:6000",
+    "User-Agent": "python-requests/2.32.3",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2025-06-05T19:42:55.739934 #35496]  INFO -- : Found matching response for DELETE /servers/servers/1
+D, [2025-06-05T19:42:55.740112 #35496] DEBUG -- : {
+  "status": 204,
+  "headers": {
+  }
+}
+I, [2025-06-05T19:42:55.753982 #35496]  INFO -- : Verifying - interactions matched
+I, [2025-06-05T19:42:55.766977 #35496]  INFO -- : Writing pact for TaskProvider to ./pacts/taskconsumer-taskprovider.json
+I, [2025-06-05T19:42:55.784002 #35496]  INFO -- : Cleared interactions
+I, [2025-06-05T19:42:55.798269 #35496]  INFO -- : Registered expected interaction DELETE /servers/servers/99
+D, [2025-06-05T19:42:55.798446 #35496] DEBUG -- : {
+  "description": "Borrar servidor no encontrado",
+  "request": {
+    "method": "DELETE",
+    "path": "/servers/servers/99"
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+    }
+  },
+  "metadata": null
+}
+I, [2025-06-05T19:42:55.814701 #35496]  INFO -- : Received request DELETE /servers/servers/99
+D, [2025-06-05T19:42:55.814817 #35496] DEBUG -- : {
+  "path": "/servers/servers/99",
+  "query": "",
+  "method": "delete",
+  "headers": {
+    "Host": "localhost:6000",
+    "User-Agent": "python-requests/2.32.3",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2025-06-05T19:42:55.814921 #35496]  INFO -- : Found matching response for DELETE /servers/servers/99
+D, [2025-06-05T19:42:55.814978 #35496] DEBUG -- : {
+  "status": 404,
+  "headers": {
+  }
+}
+I, [2025-06-05T19:42:55.830121 #35496]  INFO -- : Verifying - interactions matched
+I, [2025-06-05T19:42:55.846683 #35496]  INFO -- : Writing pact for TaskProvider to ./pacts/taskconsumer-taskprovider.json

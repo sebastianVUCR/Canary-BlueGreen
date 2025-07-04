@@ -1,0 +1,684 @@
+# Logfile created on 2025-06-05 19:08:52 -0600 by logger.rb/v1.5.3
+I, [2025-06-05T19:08:53.823491 #26508]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Obtiene todos los servidores with GET / returns a response which has status code 200'
+I, [2025-06-05T19:08:53.823719 #26508]  INFO -- : Sending GET request to path: "/" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:08:53.823788 #26508] DEBUG -- : body :
+I, [2025-06-05T19:08:53.884595 #26508]  INFO -- : Received response with status: 404, headers: {"Server"=>"gunicorn", "Date"=>"Fri, 06 Jun 2025 01:08:53 GMT", "Connection"=>"close", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207"}, see debug logs for body
+D, [2025-06-05T19:08:53.884867 #26508] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:08:53.924459 #26508]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Agregar servidor with POST /servers returns a response which has status code 201'
+I, [2025-06-05T19:08:53.924651 #26508]  INFO -- : Sending POST request to path: "/servers" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:08:53.924770 #26508] DEBUG -- : body :{"info":["Linux"],"ip":"192.000.000","name":"Servidor nuevo"}
+I, [2025-06-05T19:08:53.946934 #26508]  INFO -- : Received response with status: 404, headers: {"Server"=>"gunicorn", "Date"=>"Fri, 06 Jun 2025 01:08:53 GMT", "Connection"=>"close", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207"}, see debug logs for body
+D, [2025-06-05T19:08:53.947056 #26508] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:08:53.948029 #26508]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Cambiar info with PUT /servers/changeip/1 returns a response which has status code 200'
+I, [2025-06-05T19:08:53.948223 #26508]  INFO -- : Sending PUT request to path: "/servers/changeip/1" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:08:53.948291 #26508] DEBUG -- : body :{"info":["New info"],"name":"Nuevo servidor"}
+I, [2025-06-05T19:08:53.963148 #26508]  INFO -- : Received response with status: 404, headers: {"Server"=>"gunicorn", "Date"=>"Fri, 06 Jun 2025 01:08:53 GMT", "Connection"=>"close", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207"}, see debug logs for body
+D, [2025-06-05T19:08:53.963283 #26508] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:08:53.964403 #26508]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen no encontrado Cambiar info no encontrado with PUT /servers/changeip/99 returns a response which has status code 404'
+I, [2025-06-05T19:08:53.964597 #26508]  INFO -- : Sending PUT request to path: "/servers/changeip/99" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen no encontrado"}]}, see debug logs for body
+D, [2025-06-05T19:08:53.964678 #26508] DEBUG -- : body :{"info":["New info 99"],"name":"Nuevo servidor 99"}
+I, [2025-06-05T19:08:53.977607 #26508]  INFO -- : Received response with status: 404, headers: {"Server"=>"gunicorn", "Date"=>"Fri, 06 Jun 2025 01:08:53 GMT", "Connection"=>"close", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207"}, see debug logs for body
+D, [2025-06-05T19:08:53.977822 #26508] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:08:53.979660 #26508]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Borrar servidor with DELETE /servers/1 returns a response which has status code 204'
+I, [2025-06-05T19:08:53.979997 #26508]  INFO -- : Sending DELETE request to path: "/servers/1" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:08:53.980138 #26508] DEBUG -- : body :
+I, [2025-06-05T19:08:53.993414 #26508]  INFO -- : Received response with status: 404, headers: {"Server"=>"gunicorn", "Date"=>"Fri, 06 Jun 2025 01:08:53 GMT", "Connection"=>"close", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207"}, see debug logs for body
+D, [2025-06-05T19:08:53.993530 #26508] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:08:53.994747 #26508]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Borrar servidor no encontrado with DELETE /servers/99 returns a response which has status code 404'
+I, [2025-06-05T19:08:53.995382 #26508]  INFO -- : Sending DELETE request to path: "/servers/99" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:08:53.995568 #26508] DEBUG -- : body :
+I, [2025-06-05T19:08:54.010130 #26508]  INFO -- : Received response with status: 404, headers: {"Server"=>"gunicorn", "Date"=>"Fri, 06 Jun 2025 01:08:54 GMT", "Connection"=>"close", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207"}, see debug logs for body
+D, [2025-06-05T19:08:54.010473 #26508] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:15:16.200133 #20844]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Obtiene todos los servidores with GET / returns a response which has status code 200'
+I, [2025-06-05T19:15:16.200407 #20844]  INFO -- : Sending GET request to path: "/" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:15:16.200508 #20844] DEBUG -- : body :
+I, [2025-06-05T19:15:18.267436 #20844]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:15:18 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:15:18.267555 #20844] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:15:18.276552 #20844]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Agregar servidor with POST /servers returns a response which has status code 201'
+I, [2025-06-05T19:15:18.276971 #20844]  INFO -- : Sending POST request to path: "/servers" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:15:18.277124 #20844] DEBUG -- : body :{"info":["Linux"],"ip":"192.000.000","name":"Servidor nuevo"}
+I, [2025-06-05T19:15:20.346088 #20844]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:15:20 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:15:20.346338 #20844] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:15:20.347496 #20844]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Cambiar info with PUT /servers/changeip/1 returns a response which has status code 200'
+I, [2025-06-05T19:15:20.347684 #20844]  INFO -- : Sending PUT request to path: "/servers/changeip/1" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:15:20.347885 #20844] DEBUG -- : body :{"info":["New info"],"name":"Nuevo servidor"}
+I, [2025-06-05T19:15:22.406978 #20844]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:15:22 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:15:22.407541 #20844] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:15:22.410675 #20844]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen no encontrado Cambiar info no encontrado with PUT /servers/changeip/99 returns a response which has status code 404'
+I, [2025-06-05T19:15:22.411359 #20844]  INFO -- : Sending PUT request to path: "/servers/changeip/99" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen no encontrado"}]}, see debug logs for body
+D, [2025-06-05T19:15:22.411480 #20844] DEBUG -- : body :{"info":["New info 99"],"name":"Nuevo servidor 99"}
+I, [2025-06-05T19:15:24.469114 #20844]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:15:24 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:15:24.469292 #20844] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:15:24.471836 #20844]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Borrar servidor with DELETE /servers/1 returns a response which has status code 204'
+I, [2025-06-05T19:15:24.472324 #20844]  INFO -- : Sending DELETE request to path: "/servers/1" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:15:24.472447 #20844] DEBUG -- : body :
+I, [2025-06-05T19:15:26.530669 #20844]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:15:26 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:15:26.531491 #20844] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:16:31.561876 #10476]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Obtiene todos los servidores with GET / returns a response which has status code 200'
+I, [2025-06-05T19:16:31.562164 #10476]  INFO -- : Sending GET request to path: "/" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:16:31.562261 #10476] DEBUG -- : body :
+I, [2025-06-05T19:16:31.589295 #10476]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:16:31 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:16:31.589450 #10476] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:16:31.599566 #10476]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Agregar servidor with POST /servers returns a response which has status code 201'
+I, [2025-06-05T19:16:31.599867 #10476]  INFO -- : Sending POST request to path: "/servers" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:16:31.599942 #10476] DEBUG -- : body :{"info":["Linux"],"ip":"192.000.000","name":"Servidor nuevo"}
+I, [2025-06-05T19:16:31.620618 #10476]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:16:31 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:16:31.620821 #10476] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:16:31.621994 #10476]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Cambiar info with PUT /servers/changeip/1 returns a response which has status code 200'
+I, [2025-06-05T19:16:31.622215 #10476]  INFO -- : Sending PUT request to path: "/servers/changeip/1" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:16:31.622297 #10476] DEBUG -- : body :{"info":["New info"],"name":"Nuevo servidor"}
+I, [2025-06-05T19:16:31.637853 #10476]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:16:31 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:16:31.637979 #10476] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:16:31.638970 #10476]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen no encontrado Cambiar info no encontrado with PUT /servers/changeip/99 returns a response which has status code 404'
+I, [2025-06-05T19:16:31.639161 #10476]  INFO -- : Sending PUT request to path: "/servers/changeip/99" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen no encontrado"}]}, see debug logs for body
+D, [2025-06-05T19:16:31.639329 #10476] DEBUG -- : body :{"info":["New info 99"],"name":"Nuevo servidor 99"}
+I, [2025-06-05T19:16:31.665826 #10476]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:16:31 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:16:31.666001 #10476] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:16:31.667336 #10476]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Borrar servidor with DELETE /servers/1 returns a response which has status code 204'
+I, [2025-06-05T19:16:31.667529 #10476]  INFO -- : Sending DELETE request to path: "/servers/1" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:16:31.667582 #10476] DEBUG -- : body :
+I, [2025-06-05T19:16:31.680982 #10476]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:16:31 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:16:31.681112 #10476] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:22:26.954012 #31308]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Obtiene todos los servidores with GET / returns a response which has status code 200'
+I, [2025-06-05T19:22:26.954435 #31308]  INFO -- : Sending GET request to path: "/" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:22:26.954503 #31308] DEBUG -- : body :
+I, [2025-06-05T19:22:26.978731 #31308]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:22:26 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:22:26.978880 #31308] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:22:26.989670 #31308]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Agregar servidor with POST /servers returns a response which has status code 201'
+I, [2025-06-05T19:22:26.989886 #31308]  INFO -- : Sending POST request to path: "/servers" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:22:26.989960 #31308] DEBUG -- : body :{"info":["Linux"],"ip":"192.000.000","name":"Servidor nuevo"}
+I, [2025-06-05T19:22:27.009872 #31308]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:22:26 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:22:27.010092 #31308] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:22:27.011841 #31308]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Cambiar info with PUT /servers/changeip/1 returns a response which has status code 200'
+I, [2025-06-05T19:22:27.012059 #31308]  INFO -- : Sending PUT request to path: "/servers/changeip/1" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:22:27.012153 #31308] DEBUG -- : body :{"info":["New info"],"name":"Nuevo servidor"}
+I, [2025-06-05T19:22:27.026878 #31308]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:22:27 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:22:27.026976 #31308] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:22:27.028101 #31308]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen no encontrado Cambiar info no encontrado with PUT /servers/changeip/99 returns a response which has status code 404'
+I, [2025-06-05T19:22:27.028257 #31308]  INFO -- : Sending PUT request to path: "/servers/changeip/99" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen no encontrado"}]}, see debug logs for body
+D, [2025-06-05T19:22:27.028348 #31308] DEBUG -- : body :{"info":["New info 99"],"name":"Nuevo servidor 99"}
+I, [2025-06-05T19:22:27.040288 #31308]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:22:27 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:22:27.040714 #31308] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:22:27.042567 #31308]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Borrar servidor with DELETE /servers/1 returns a response which has status code 204'
+I, [2025-06-05T19:22:27.042767 #31308]  INFO -- : Sending DELETE request to path: "/servers/1" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:22:27.042825 #31308] DEBUG -- : body :
+I, [2025-06-05T19:22:27.057044 #31308]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:22:27 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:22:27.057231 #31308] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:23:04.809762 #28644]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Obtiene todos los servidores with GET / returns a response which has status code 200'
+I, [2025-06-05T19:23:04.810166 #28644]  INFO -- : Sending GET request to path: "/" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:23:04.810911 #28644] DEBUG -- : body :
+I, [2025-06-05T19:23:04.849758 #28644]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:23:04 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:23:04.850087 #28644] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:23:04.859280 #28644]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Agregar servidor with POST /servers returns a response which has status code 201'
+I, [2025-06-05T19:23:04.859477 #28644]  INFO -- : Sending POST request to path: "/servers" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:23:04.859542 #28644] DEBUG -- : body :{"info":["Linux"],"ip":"192.000.000","name":"Servidor nuevo"}
+I, [2025-06-05T19:23:04.881027 #28644]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:23:04 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:23:04.881860 #28644] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:23:04.888979 #28644]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Cambiar info with PUT /servers/changeip/1 returns a response which has status code 200'
+I, [2025-06-05T19:23:04.890119 #28644]  INFO -- : Sending PUT request to path: "/servers/changeip/1" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:23:04.890535 #28644] DEBUG -- : body :{"info":["New info"],"name":"Nuevo servidor"}
+I, [2025-06-05T19:23:04.916653 #28644]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:23:04 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:23:04.916937 #28644] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:23:04.919087 #28644]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen no encontrado Cambiar info no encontrado with PUT /servers/changeip/99 returns a response which has status code 404'
+I, [2025-06-05T19:23:04.919315 #28644]  INFO -- : Sending PUT request to path: "/servers/changeip/99" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen no encontrado"}]}, see debug logs for body
+D, [2025-06-05T19:23:04.919380 #28644] DEBUG -- : body :{"info":["New info 99"],"name":"Nuevo servidor 99"}
+I, [2025-06-05T19:23:04.943644 #28644]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:23:04 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:23:04.944158 #28644] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:23:04.948447 #28644]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Borrar servidor with DELETE /servers/1 returns a response which has status code 204'
+I, [2025-06-05T19:23:04.949903 #28644]  INFO -- : Sending DELETE request to path: "/servers/1" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:23:04.950081 #28644] DEBUG -- : body :
+I, [2025-06-05T19:23:04.972614 #28644]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:23:04 GMT", "Content-Type"=>"text/html; charset=utf-8", "Content-Length"=>"207", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:23:04.972883 #28644] DEBUG -- : body: <!doctype html>
+<html lang=en>
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+I, [2025-06-05T19:30:17.243266 #35824]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Obtiene todos los servidores with GET /servers/ returns a response which has status code 200'
+I, [2025-06-05T19:30:17.243516 #35824]  INFO -- : Sending GET request to path: "/servers/" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:30:17.243583 #35824] DEBUG -- : body :
+I, [2025-06-05T19:30:19.311454 #35824]  INFO -- : Received response with status: 200, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:30:19 GMT", "Content-Type"=>"application/json", "Content-Length"=>"336", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:30:19.311660 #35824] DEBUG -- : body: [
+  {
+    "id": 1,
+    "info": [
+      "Linux"
+    ],
+    "ip": "192.000.000",
+    "name": "Server1"
+  },
+  {
+    "id": 2,
+    "info": [
+      "8 cores"
+    ],
+    "ip": "192.000.001",
+    "name": "Server2"
+  },
+  {
+    "id": 3,
+    "info": [
+      "Desktop",
+      "Windows"
+    ],
+    "ip": "192.000.002",
+    "name": "Server3"
+  }
+]
+
+I, [2025-06-05T19:30:19.316471 #35824]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Agregar servidor with POST /servers/servers returns a response which has status code 201'
+I, [2025-06-05T19:30:19.317024 #35824]  INFO -- : Sending POST request to path: "/servers/servers" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:30:19.317090 #35824] DEBUG -- : body :{"info":["Linux"],"ip":"192.000.000","name":"Servidor nuevo"}
+I, [2025-06-05T19:30:21.374396 #35824]  INFO -- : Received response with status: 201, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:30:21 GMT", "Content-Type"=>"application/json", "Content-Length"=>"94", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:30:21.374531 #35824] DEBUG -- : body: {
+  "id": 4,
+  "info": [
+    "Linux"
+  ],
+  "ip": "192.000.000",
+  "name": "Servidor nuevo"
+}
+
+I, [2025-06-05T19:30:21.375474 #35824]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Cambiar info with PUT /servers/servers/changeip/1 returns a response which has status code 200'
+I, [2025-06-05T19:30:21.375667 #35824]  INFO -- : Sending PUT request to path: "/servers/servers/changeip/1" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:30:21.375800 #35824] DEBUG -- : body :{"info":["New info"],"name":"Nuevo servidor"}
+I, [2025-06-05T19:30:23.434556 #35824]  INFO -- : Received response with status: 200, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:30:23 GMT", "Content-Type"=>"application/json", "Content-Length"=>"90", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:30:23.434752 #35824] DEBUG -- : body: {
+  "id": 1,
+  "info": [
+    "New info"
+  ],
+  "ip": "192.000.000",
+  "name": "Server1"
+}
+
+I, [2025-06-05T19:30:23.453131 #35824]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen no encontrado Cambiar info no encontrado with PUT /servers/servers/changeip/99 returns a response which has status code 404'
+I, [2025-06-05T19:30:23.453625 #35824]  INFO -- : Sending PUT request to path: "/servers/servers/changeip/99" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen no encontrado"}]}, see debug logs for body
+D, [2025-06-05T19:30:23.453729 #35824] DEBUG -- : body :{"info":["New info 99"],"name":"Nuevo servidor 99"}
+I, [2025-06-05T19:30:25.511645 #35824]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:30:25 GMT", "Content-Type"=>"application/json", "Content-Length"=>"34", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:30:25.512247 #35824] DEBUG -- : body: {
+  "error": "Server not found"
+}
+
+I, [2025-06-05T19:30:25.516881 #35824]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Borrar servidor with DELETE /servers/servers/1 returns a response which has status code 204'
+I, [2025-06-05T19:30:25.517447 #35824]  INFO -- : Sending DELETE request to path: "/servers/servers/1" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:30:25.517632 #35824] DEBUG -- : body :
+I, [2025-06-05T19:30:27.590758 #35824]  INFO -- : Received response with status: 204, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:30:27 GMT", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:30:27.591101 #35824] DEBUG -- : body: 
+I, [2025-06-05T19:30:27.594375 #35824]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Borrar servidor no encontrado with DELETE /servers/servers/99 returns a response which has status code 404'
+I, [2025-06-05T19:30:27.595711 #35824]  INFO -- : Sending DELETE request to path: "/servers/servers/99" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:30:27.595791 #35824] DEBUG -- : body :
+I, [2025-06-05T19:30:29.649710 #35824]  INFO -- : Received response with status: 204, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:30:29 GMT", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:30:29.650075 #35824] DEBUG -- : body: 
+I, [2025-06-05T19:36:12.171638 #22388]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Obtiene todos los servidores with GET /servers/ returns a response which has status code 200'
+I, [2025-06-05T19:36:12.172036 #22388]  INFO -- : Sending GET request to path: "/servers/" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:36:12.172143 #22388] DEBUG -- : body :
+I, [2025-06-05T19:36:14.236529 #22388]  INFO -- : Received response with status: 200, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:36:14 GMT", "Content-Type"=>"application/json", "Content-Length"=>"336", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:36:14.237263 #22388] DEBUG -- : body: [
+  {
+    "id": 1,
+    "info": [
+      "Linux"
+    ],
+    "ip": "192.000.000",
+    "name": "Server1"
+  },
+  {
+    "id": 2,
+    "info": [
+      "8 cores"
+    ],
+    "ip": "192.000.001",
+    "name": "Server2"
+  },
+  {
+    "id": 3,
+    "info": [
+      "Desktop",
+      "Windows"
+    ],
+    "ip": "192.000.002",
+    "name": "Server3"
+  }
+]
+
+I, [2025-06-05T19:36:14.247147 #22388]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Agregar servidor with POST /servers/servers returns a response which has status code 201'
+I, [2025-06-05T19:36:14.247384 #22388]  INFO -- : Sending POST request to path: "/servers/servers" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:36:14.247536 #22388] DEBUG -- : body :{"info":["Linux"],"ip":"192.000.000","name":"Servidor nuevo"}
+I, [2025-06-05T19:36:16.319769 #22388]  INFO -- : Received response with status: 201, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:36:16 GMT", "Content-Type"=>"application/json", "Content-Length"=>"94", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:36:16.320067 #22388] DEBUG -- : body: {
+  "id": 4,
+  "info": [
+    "Linux"
+  ],
+  "ip": "192.000.000",
+  "name": "Servidor nuevo"
+}
+
+I, [2025-06-05T19:36:16.322184 #22388]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Cambiar info with PUT /servers/servers/changeip/1 returns a response which has status code 200'
+I, [2025-06-05T19:36:16.322506 #22388]  INFO -- : Sending PUT request to path: "/servers/servers/changeip/1" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:36:16.322777 #22388] DEBUG -- : body :{"info":["New info"],"name":"Nuevo servidor"}
+I, [2025-06-05T19:36:18.380403 #22388]  INFO -- : Received response with status: 200, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:36:18 GMT", "Content-Type"=>"application/json", "Content-Length"=>"90", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:36:18.380946 #22388] DEBUG -- : body: {
+  "id": 1,
+  "info": [
+    "New info"
+  ],
+  "ip": "192.000.000",
+  "name": "Server1"
+}
+
+I, [2025-06-05T19:36:18.392912 #22388]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen no encontrado Cambiar info no encontrado with PUT /servers/servers/changeip/99 returns a response which has status code 404'
+I, [2025-06-05T19:36:18.393186 #22388]  INFO -- : Sending PUT request to path: "/servers/servers/changeip/99" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen no encontrado"}]}, see debug logs for body
+D, [2025-06-05T19:36:18.393307 #22388] DEBUG -- : body :{"info":["New info 99"],"name":"Nuevo servidor 99"}
+I, [2025-06-05T19:36:20.455386 #22388]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:36:20 GMT", "Content-Type"=>"application/json", "Content-Length"=>"34", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:36:20.455497 #22388] DEBUG -- : body: {
+  "error": "Server not found"
+}
+
+I, [2025-06-05T19:36:20.456577 #22388]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Borrar servidor with DELETE /servers/servers/1 returns a response which has status code 204'
+I, [2025-06-05T19:36:20.457111 #22388]  INFO -- : Sending DELETE request to path: "/servers/servers/1" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:36:20.457268 #22388] DEBUG -- : body :
+I, [2025-06-05T19:36:22.519584 #22388]  INFO -- : Received response with status: 204, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:36:22 GMT", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:36:22.520260 #22388] DEBUG -- : body: 
+I, [2025-06-05T19:36:22.521768 #22388]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Borrar servidor no encontrado with DELETE /servers/servers/99 returns a response which has status code 404'
+I, [2025-06-05T19:36:22.522299 #22388]  INFO -- : Sending DELETE request to path: "/servers/servers/99" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:36:22.522418 #22388] DEBUG -- : body :
+I, [2025-06-05T19:36:24.577429 #22388]  INFO -- : Received response with status: 204, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:36:24 GMT", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:36:24.577538 #22388] DEBUG -- : body: 
+I, [2025-06-05T19:39:30.460785 #11344]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Obtiene todos los servidores with GET /servers/ returns a response which has status code 200'
+I, [2025-06-05T19:39:30.461149 #11344]  INFO -- : Sending GET request to path: "/servers/" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:39:30.461231 #11344] DEBUG -- : body :
+I, [2025-06-05T19:39:32.536114 #11344]  INFO -- : Received response with status: 200, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:39:32 GMT", "Content-Type"=>"application/json", "Content-Length"=>"336", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:39:32.536589 #11344] DEBUG -- : body: [
+  {
+    "id": 1,
+    "info": [
+      "Linux"
+    ],
+    "ip": "192.000.000",
+    "name": "Server1"
+  },
+  {
+    "id": 2,
+    "info": [
+      "8 cores"
+    ],
+    "ip": "192.000.001",
+    "name": "Server2"
+  },
+  {
+    "id": 3,
+    "info": [
+      "Desktop",
+      "Windows"
+    ],
+    "ip": "192.000.002",
+    "name": "Server3"
+  }
+]
+
+I, [2025-06-05T19:39:32.547117 #11344]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Agregar servidor with POST /servers/servers returns a response which has status code 201'
+I, [2025-06-05T19:39:32.547346 #11344]  INFO -- : Sending POST request to path: "/servers/servers" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:39:32.547506 #11344] DEBUG -- : body :{"info":["Linux"],"ip":"192.000.000","name":"Servidor nuevo"}
+I, [2025-06-05T19:39:34.614597 #11344]  INFO -- : Received response with status: 201, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:39:34 GMT", "Content-Type"=>"application/json", "Content-Length"=>"94", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:39:34.614751 #11344] DEBUG -- : body: {
+  "id": 4,
+  "info": [
+    "Linux"
+  ],
+  "ip": "192.000.000",
+  "name": "Servidor nuevo"
+}
+
+I, [2025-06-05T19:39:34.615517 #11344]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Cambiar info with PUT /servers/servers/changeip/1 returns a response which has status code 200'
+I, [2025-06-05T19:39:34.615692 #11344]  INFO -- : Sending PUT request to path: "/servers/servers/changeip/1" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:39:34.615750 #11344] DEBUG -- : body :{"info":["New info"],"name":"Nuevo servidor"}
+I, [2025-06-05T19:39:36.682724 #11344]  INFO -- : Received response with status: 200, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:39:36 GMT", "Content-Type"=>"application/json", "Content-Length"=>"97", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:39:36.683150 #11344] DEBUG -- : body: {
+  "id": 1,
+  "info": [
+    "New info"
+  ],
+  "ip": "192.000.000",
+  "name": "Nuevo servidor"
+}
+
+I, [2025-06-05T19:39:36.684628 #11344]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen no encontrado Cambiar info no encontrado with PUT /servers/servers/changeip/99 returns a response which has status code 404'
+I, [2025-06-05T19:39:36.685235 #11344]  INFO -- : Sending PUT request to path: "/servers/servers/changeip/99" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type", "X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen no encontrado"}]}, see debug logs for body
+D, [2025-06-05T19:39:36.685310 #11344] DEBUG -- : body :{"info":["New info 99"],"name":"Nuevo servidor 99"}
+I, [2025-06-05T19:39:38.749357 #11344]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:39:38 GMT", "Content-Type"=>"application/json", "Content-Length"=>"34", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:39:38.749623 #11344] DEBUG -- : body: {
+  "error": "Server not found"
+}
+
+I, [2025-06-05T19:39:38.751429 #11344]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Borrar servidor with DELETE /servers/servers/1 returns a response which has status code 204'
+I, [2025-06-05T19:39:38.751773 #11344]  INFO -- : Sending DELETE request to path: "/servers/servers/1" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:39:38.751843 #11344] DEBUG -- : body :
+I, [2025-06-05T19:39:40.814351 #11344]  INFO -- : Received response with status: 204, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:39:40 GMT", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:39:40.814640 #11344] DEBUG -- : body: 
+I, [2025-06-05T19:39:40.815148 #11344]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Given Servidores existen Borrar servidor no encontrado with DELETE /servers/servers/99 returns a response which has status code 404'
+I, [2025-06-05T19:39:40.815610 #11344]  INFO -- : Sending DELETE request to path: "/servers/servers/99" with headers: {"X_PACT_PROVIDER_STATES"=>[{"name"=>"Servidores existen"}]}, see debug logs for body
+D, [2025-06-05T19:39:40.815788 #11344] DEBUG -- : body :
+I, [2025-06-05T19:39:42.867433 #11344]  INFO -- : Received response with status: 204, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:39:42 GMT", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:39:42.867610 #11344] DEBUG -- : body: 
+I, [2025-06-05T19:43:05.125024 #34328]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Obtiene todos los servidores with GET /servers/ returns a response which has status code 200'
+I, [2025-06-05T19:43:05.125383 #34328]  INFO -- : Sending GET request to path: "/servers/" with headers: {}, see debug logs for body
+D, [2025-06-05T19:43:05.125555 #34328] DEBUG -- : body :
+I, [2025-06-05T19:43:09.236908 #34328]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Obtiene todos los servidores with GET /servers/ returns a response which has a matching body'
+I, [2025-06-05T19:43:09.237066 #34328]  INFO -- : Sending GET request to path: "/servers/" with headers: {}, see debug logs for body
+D, [2025-06-05T19:43:09.237157 #34328] DEBUG -- : body :
+I, [2025-06-05T19:43:13.338046 #34328]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Agregar servidor with POST /servers/servers returns a response which has status code 201'
+I, [2025-06-05T19:43:13.339125 #34328]  INFO -- : Sending POST request to path: "/servers/servers" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type"}, see debug logs for body
+D, [2025-06-05T19:43:13.339874 #34328] DEBUG -- : body :{"info":["Linux"],"ip":"192.000.000","name":"Servidor nuevo"}
+I, [2025-06-05T19:43:17.438428 #34328]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Agregar servidor with POST /servers/servers returns a response which has a matching body'
+I, [2025-06-05T19:43:17.439051 #34328]  INFO -- : Sending POST request to path: "/servers/servers" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type"}, see debug logs for body
+D, [2025-06-05T19:43:17.439358 #34328] DEBUG -- : body :{"info":["Linux"],"ip":"192.000.000","name":"Servidor nuevo"}
+I, [2025-06-05T19:43:21.538882 #34328]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Cambiar info with PUT /servers/servers/changeip/1 returns a response which has status code 200'
+I, [2025-06-05T19:43:21.539050 #34328]  INFO -- : Sending PUT request to path: "/servers/servers/changeip/1" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type"}, see debug logs for body
+D, [2025-06-05T19:43:21.539106 #34328] DEBUG -- : body :{"info":["New info"],"name":"Nuevo servidor"}
+I, [2025-06-05T19:43:23.814006 #34328]  INFO -- : Received response with status: 200, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:43:23 GMT", "Content-Type"=>"application/json", "Content-Length"=>"97", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:43:23.814141 #34328] DEBUG -- : body: {
+  "id": 1,
+  "info": [
+    "New info"
+  ],
+  "ip": "192.000.000",
+  "name": "Nuevo servidor"
+}
+
+I, [2025-06-05T19:43:23.817582 #34328]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Cambiar info no encontrado with PUT /servers/servers/changeip/99 returns a response which has status code 404'
+I, [2025-06-05T19:43:23.817731 #34328]  INFO -- : Sending PUT request to path: "/servers/servers/changeip/99" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type"}, see debug logs for body
+D, [2025-06-05T19:43:23.817786 #34328] DEBUG -- : body :{"info":["New info 99"],"name":"Nuevo servidor 99"}
+I, [2025-06-05T19:43:25.883811 #34328]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:43:25 GMT", "Content-Type"=>"application/json", "Content-Length"=>"34", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:43:25.883973 #34328] DEBUG -- : body: {
+  "error": "Server not found"
+}
+
+I, [2025-06-05T19:43:25.884740 #34328]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Borrar servidor with DELETE /servers/servers/1 returns a response which has status code 204'
+I, [2025-06-05T19:43:25.885177 #34328]  INFO -- : Sending DELETE request to path: "/servers/servers/1" with headers: {}, see debug logs for body
+D, [2025-06-05T19:43:25.885311 #34328] DEBUG -- : body :
+I, [2025-06-05T19:43:27.952067 #34328]  INFO -- : Received response with status: 204, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:43:27 GMT", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:43:27.952243 #34328] DEBUG -- : body: 
+I, [2025-06-05T19:43:27.952896 #34328]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Borrar servidor no encontrado with DELETE /servers/servers/99 returns a response which has status code 404'
+I, [2025-06-05T19:43:27.953091 #34328]  INFO -- : Sending DELETE request to path: "/servers/servers/99" with headers: {}, see debug logs for body
+D, [2025-06-05T19:43:27.953169 #34328] DEBUG -- : body :
+I, [2025-06-05T19:43:30.012768 #34328]  INFO -- : Received response with status: 204, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:43:30 GMT", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:43:30.013228 #34328] DEBUG -- : body: 
+I, [2025-06-05T19:48:41.757081 #22960]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Obtiene todos los servidores with GET /servers/ returns a response which has status code 200'
+I, [2025-06-05T19:48:41.757477 #22960]  INFO -- : Sending GET request to path: "/servers/" with headers: {}, see debug logs for body
+D, [2025-06-05T19:48:41.757551 #22960] DEBUG -- : body :
+I, [2025-06-05T19:48:43.830084 #22960]  INFO -- : Received response with status: 200, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:48:43 GMT", "Content-Type"=>"application/json", "Content-Length"=>"336", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:48:43.830527 #22960] DEBUG -- : body: [
+  {
+    "id": 1,
+    "info": [
+      "Linux"
+    ],
+    "ip": "192.000.000",
+    "name": "Server1"
+  },
+  {
+    "id": 2,
+    "info": [
+      "8 cores"
+    ],
+    "ip": "192.000.001",
+    "name": "Server2"
+  },
+  {
+    "id": 3,
+    "info": [
+      "Desktop",
+      "Windows"
+    ],
+    "ip": "192.000.002",
+    "name": "Server3"
+  }
+]
+
+I, [2025-06-05T19:48:43.843807 #22960]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Agregar servidor with POST /servers/servers returns a response which has status code 201'
+I, [2025-06-05T19:48:43.844026 #22960]  INFO -- : Sending POST request to path: "/servers/servers" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type"}, see debug logs for body
+D, [2025-06-05T19:48:43.844160 #22960] DEBUG -- : body :{"info":["Linux"],"ip":"192.000.000","name":"Servidor nuevo"}
+I, [2025-06-05T19:48:45.916273 #22960]  INFO -- : Received response with status: 201, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:48:45 GMT", "Content-Type"=>"application/json", "Content-Length"=>"94", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:48:45.916515 #22960] DEBUG -- : body: {
+  "id": 4,
+  "info": [
+    "Linux"
+  ],
+  "ip": "192.000.000",
+  "name": "Servidor nuevo"
+}
+
+I, [2025-06-05T19:48:45.917440 #22960]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Cambiar info with PUT /servers/servers/changeip/1 returns a response which has status code 200'
+I, [2025-06-05T19:48:45.917615 #22960]  INFO -- : Sending PUT request to path: "/servers/servers/changeip/1" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type"}, see debug logs for body
+D, [2025-06-05T19:48:45.917677 #22960] DEBUG -- : body :{"info":["New info"],"name":"Nuevo servidor"}
+I, [2025-06-05T19:48:47.982984 #22960]  INFO -- : Received response with status: 200, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:48:47 GMT", "Content-Type"=>"application/json", "Content-Length"=>"97", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:48:47.983398 #22960] DEBUG -- : body: {
+  "id": 1,
+  "info": [
+    "New info"
+  ],
+  "ip": "192.000.000",
+  "name": "Nuevo servidor"
+}
+
+I, [2025-06-05T19:48:47.984844 #22960]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Cambiar info no encontrado with PUT /servers/servers/changeip/99 returns a response which has status code 404'
+I, [2025-06-05T19:48:47.985413 #22960]  INFO -- : Sending PUT request to path: "/servers/servers/changeip/99" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type"}, see debug logs for body
+D, [2025-06-05T19:48:47.985696 #22960] DEBUG -- : body :{"info":["New info 99"],"name":"Nuevo servidor 99"}
+I, [2025-06-05T19:48:50.049241 #22960]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:48:50 GMT", "Content-Type"=>"application/json", "Content-Length"=>"34", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:48:50.049525 #22960] DEBUG -- : body: {
+  "error": "Server not found"
+}
+
+I, [2025-06-05T19:48:50.050249 #22960]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Borrar servidor with DELETE /servers/servers/1 returns a response which has status code 204'
+I, [2025-06-05T19:48:50.050437 #22960]  INFO -- : Sending DELETE request to path: "/servers/servers/1" with headers: {}, see debug logs for body
+D, [2025-06-05T19:48:50.050484 #22960] DEBUG -- : body :
+I, [2025-06-05T19:48:52.112522 #22960]  INFO -- : Received response with status: 204, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:48:52 GMT", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:48:52.113463 #22960] DEBUG -- : body: 
+I, [2025-06-05T19:48:52.114159 #22960]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Borrar servidor no encontrado with DELETE /servers/servers/99 returns a response which has status code 404'
+I, [2025-06-05T19:48:52.114261 #22960]  INFO -- : Sending DELETE request to path: "/servers/servers/99" with headers: {}, see debug logs for body
+D, [2025-06-05T19:48:52.114968 #22960] DEBUG -- : body :
+I, [2025-06-05T19:48:54.166635 #22960]  INFO -- : Received response with status: 204, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:48:54 GMT", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:48:54.167515 #22960] DEBUG -- : body: 
+I, [2025-06-05T19:49:43.293531 #35008]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Obtiene todos los servidores with GET /servers/ returns a response which has status code 200'
+I, [2025-06-05T19:49:43.293823 #35008]  INFO -- : Sending GET request to path: "/servers/" with headers: {}, see debug logs for body
+D, [2025-06-05T19:49:43.293936 #35008] DEBUG -- : body :
+I, [2025-06-05T19:49:45.361291 #35008]  INFO -- : Received response with status: 200, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:49:45 GMT", "Content-Type"=>"application/json", "Content-Length"=>"336", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:49:45.361472 #35008] DEBUG -- : body: [
+  {
+    "id": 1,
+    "info": [
+      "Linux"
+    ],
+    "ip": "192.000.000",
+    "name": "Server1"
+  },
+  {
+    "id": 2,
+    "info": [
+      "8 cores"
+    ],
+    "ip": "192.000.001",
+    "name": "Server2"
+  },
+  {
+    "id": 3,
+    "info": [
+      "Desktop",
+      "Windows"
+    ],
+    "ip": "192.000.002",
+    "name": "Server3"
+  }
+]
+
+I, [2025-06-05T19:49:45.366038 #35008]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Agregar servidor with POST /servers/servers returns a response which has status code 201'
+I, [2025-06-05T19:49:45.366229 #35008]  INFO -- : Sending POST request to path: "/servers/servers" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type"}, see debug logs for body
+D, [2025-06-05T19:49:45.366306 #35008] DEBUG -- : body :{"info":["Linux"],"ip":"192.000.000","name":"Servidor nuevo"}
+I, [2025-06-05T19:49:47.427079 #35008]  INFO -- : Received response with status: 201, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:49:47 GMT", "Content-Type"=>"application/json", "Content-Length"=>"94", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:49:47.427301 #35008] DEBUG -- : body: {
+  "id": 4,
+  "info": [
+    "Linux"
+  ],
+  "ip": "192.000.000",
+  "name": "Servidor nuevo"
+}
+
+I, [2025-06-05T19:49:47.428210 #35008]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Cambiar info with PUT /servers/servers/changeip/1 returns a response which has status code 200'
+I, [2025-06-05T19:49:47.428388 #35008]  INFO -- : Sending PUT request to path: "/servers/servers/changeip/1" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type"}, see debug logs for body
+D, [2025-06-05T19:49:47.428532 #35008] DEBUG -- : body :{"info":["New info"],"name":"Nuevo servidor"}
+I, [2025-06-05T19:49:49.495626 #35008]  INFO -- : Received response with status: 200, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:49:49 GMT", "Content-Type"=>"application/json", "Content-Length"=>"97", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:49:49.496121 #35008] DEBUG -- : body: {
+  "id": 1,
+  "info": [
+    "New info"
+  ],
+  "ip": "192.000.000",
+  "name": "Nuevo servidor"
+}
+
+I, [2025-06-05T19:49:49.497841 #35008]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Cambiar info no encontrado with PUT /servers/servers/changeip/99 returns a response which has status code 404'
+I, [2025-06-05T19:49:49.498116 #35008]  INFO -- : Sending PUT request to path: "/servers/servers/changeip/99" with headers: {"CONTENT_TYPE"=>"application/json", "HTTP_X_PACT_ORIGINAL_HEADER_NAMES"=>"Content-Type"}, see debug logs for body
+D, [2025-06-05T19:49:49.498295 #35008] DEBUG -- : body :{"info":["New info 99"],"name":"Nuevo servidor 99"}
+I, [2025-06-05T19:49:51.557037 #35008]  INFO -- : Received response with status: 404, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:49:51 GMT", "Content-Type"=>"application/json", "Content-Length"=>"34", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:49:51.557367 #35008] DEBUG -- : body: {
+  "error": "Server not found"
+}
+
+I, [2025-06-05T19:49:51.558235 #35008]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Borrar servidor with DELETE /servers/servers/1 returns a response which has status code 204'
+I, [2025-06-05T19:49:51.558378 #35008]  INFO -- : Sending DELETE request to path: "/servers/servers/1" with headers: {}, see debug logs for body
+D, [2025-06-05T19:49:51.558424 #35008] DEBUG -- : body :
+I, [2025-06-05T19:49:53.616165 #35008]  INFO -- : Received response with status: 204, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:49:53 GMT", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:49:53.617132 #35008] DEBUG -- : body: 
+I, [2025-06-05T19:49:53.620166 #35008]  INFO -- : Running example 'Verifying a pact between TaskConsumer and TaskProvider Borrar servidor no encontrado with DELETE /servers/servers/99 returns a response which has status code 404'
+I, [2025-06-05T19:49:53.620568 #35008]  INFO -- : Sending DELETE request to path: "/servers/servers/99" with headers: {}, see debug logs for body
+D, [2025-06-05T19:49:53.620753 #35008] DEBUG -- : body :
+I, [2025-06-05T19:49:55.673321 #35008]  INFO -- : Received response with status: 204, headers: {"Server"=>"Werkzeug/3.1.3 Python/3.13.2", "Date"=>"Fri, 06 Jun 2025 01:49:55 GMT", "Connection"=>"close"}, see debug logs for body
+D, [2025-06-05T19:49:55.673447 #35008] DEBUG -- : body: 

@@ -1,0 +1,54 @@
+services:
+  nginx_proxy:
+    image: nginx:latest
+    container_name: nginx_proxy
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx_v1.conf:/etc/nginx/nginx_v1.conf
+      - ./nginx_v2.conf:/etc/nginx/nginx_v2.conf
+      - ./deploy_v2.sh:/etc/nginx/deploy_v2.sh
+      - ./rollback.sh:/etc/nginx/rollback.sh
+    ports:
+      - "80:80" # Mapea el puerto 80 del host al puerto 80 del contenedor Nginx
+                # Asegúrate de que Nginx escuche en el puerto 80 (ver siguiente paso)
+    restart: always
+    networks:
+      - my_shared_network
+
+  serveradministrator:
+    build: ./testOrchestrator/services/serverAdministrator
+    container_name: serverAdministrator_v1
+    image: production/serveradministrator:latest
+    expose: # Usa 'expose' para puertos internos entre contenedores en la misma red
+      - "5000" # El puerto 5000 del contenedor es accesible por otros servicios en 'app_network'
+    restart: always
+    hostname: serverAdministrator
+    networks:
+      - my_shared_network
+
+  users:
+    build: ./testOrchestrator/services/users
+    container_name: users_v1
+    image: production/users:latest
+    expose:
+      - "5000"
+    restart: always
+    hostname: users
+    networks:
+      - my_shared_network
+
+  orchestrator:
+    build: ./testOrchestrator/services/orchestrator
+    container_name: orchestrator_v1
+    image: production/orchestrator:latest
+    expose:
+      - "5000"
+    restart: always
+    hostname: orchestrator
+    networks:
+      - my_shared_network
+
+networks:
+  my_shared_network:
+    external: true # Declares that this network already exists and was created externally
+    name: my_shared_network # The actual name of the network you created with `docker network create`

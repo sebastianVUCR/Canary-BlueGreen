@@ -1,0 +1,15 @@
+services:
+  nginx_proxy:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro # Mount your custom nginx.conf
+    ports:
+      - "80:80" # Map host's port 80 to Nginx container's port 80
+    restart: always # Keep it running
+    # You might need to specify a network mode if you have complex networking,
+    # but by default, it will use bridge mode which can access local network IPs.
+networks:
+  my_shared_network:
+    external: true # Declares that this network already exists and was created externally
+    name: my_shared_network # The actual name of the network you created with `docker network create`
+  
