@@ -1,0 +1,49 @@
+Para probar rolling update:
+
+cd RollingUpdate/Version1
+
+docker-compose build
+docker-compose up -d
+
+cd ../..
+
+python rolling_update_container.py
+
+servers
+http://localhost:5000/servers/apidocs/
+
+users
+http://localhost:5001/users/apidocs/
+
+testOrchestrator
+http://localhost:5002/tasks/apidocs/
+
+
+Para probar Blue/Green
+
+docker network create --driver bridge my_shared_network
+
+cd BlueGreen/Version1
+docker-compose build
+docker-compose up -d
+
+cd ../Version2
+docker-compose build
+docker-compose up -d
+
+En la consola de docker del contenedor de nginx
+cd /etc/nginx
+./deploy_v2.sh
+
+Para hacer rollback se puede ejecutar el script rollback.sh en la misma carpeta.
+
+Para probar el enfoque con Docker Hub
+
+cd RollingUpdate
+python deployer.py
+rolling_update_deployer.py
+rolling_update_deployer.py
+rolling_update_deployer.py
+
+para probar la imagen
+docker run -d -p 5000:5000 --name mi_aplicacion_usuarios sebasvucr/sebas:production-server-administrator-latest

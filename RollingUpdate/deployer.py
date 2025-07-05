@@ -70,11 +70,11 @@ def main():
     login_to_dockerhub(docker_username, docker_password)
     build_push_docker_image("production-orchestrator-latest", complete_path)
 
-    # complete_path = os.path.join(base_path, "serverAdministrator")
-    # build_push_docker_image("production-server-administrator-latest", complete_path)
+    complete_path = os.path.join(base_path, "serverAdministrator")
+    build_push_docker_image("production-server-administrator-latest", complete_path)
 
-    # complete_path = os.path.join(base_path, "users")
-    # build_push_docker_image("production-users-latest", complete_path)
+    complete_path = os.path.join(base_path, "users")
+    build_push_docker_image("production-users-latest", complete_path)
 
     print("\nDeployment script finished successfully!")
 

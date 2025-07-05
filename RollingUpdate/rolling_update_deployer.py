@@ -5,7 +5,7 @@ import sys
 from deployer import login_to_dockerhub, build_push_docker_image
 
 REPOSITORY = "sebasvucr/sebas"
-TAGS = ["production-serveradministrator-latest", "production-users-latest", "production-orchestrator-latest"]
+TAGS = ["production-server-administrator-latest", "production-users-latest", "production-orchestrator-latest"]
 DIRECTORY = ["serverAdministrator", "users", "orchestrator"]
 
 def get_persistent_counter(name = "counter.txt"):
