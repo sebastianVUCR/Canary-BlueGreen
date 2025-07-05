@@ -9,8 +9,8 @@ services:
       - ./deploy_v2.sh:/etc/nginx/deploy_v2.sh
       - ./rollback.sh:/etc/nginx/rollback.sh
     ports:
-      - "80:80" # Mapea el puerto 80 del host al puerto 80 del contenedor Nginx
-                # Asegúrate de que Nginx escuche en el puerto 80 (ver siguiente paso)
+      - "5000:5000" 
+
     restart: always
     networks:
       - my_shared_network

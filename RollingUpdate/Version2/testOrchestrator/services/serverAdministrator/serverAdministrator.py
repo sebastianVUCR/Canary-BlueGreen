@@ -32,7 +32,7 @@ def add_correlation_id_to_response(response):
     response.headers[CORRELATION_ID_HEADER] = g.correlation_id
     return response
 
-@serverAdministrator_bp.route("/servers", methods=["GET"])
+@serverAdministrator_bp.route("/", methods=["GET"])
 def getServers():
     """
     Get all servers
